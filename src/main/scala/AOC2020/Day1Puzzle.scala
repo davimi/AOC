@@ -1,4 +1,4 @@
-package AOC2020.d1
+package AOC2020
 
 object Day1Puzzle extends App {
 
