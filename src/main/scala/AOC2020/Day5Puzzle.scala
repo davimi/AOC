@@ -100,8 +100,8 @@ object Day5Puzzle extends App {
     Boardingpass(rowSeq, seatSeq)
   }
 
-  val parser = new Parser[Boardingpass]("day5.txt", parseLine)
-  val boardingpasses = parser.parse()
+  val parser = new Parser[Boardingpass]("day5.txt")
+  val boardingpasses = parser.parse(parseLine)
   parser.close()
 
   val seats = boardingpasses.map(_.calcSeat()).sortBy(_.row)

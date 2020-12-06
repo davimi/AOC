@@ -1,16 +1,22 @@
 package AOC2020
-import scala.io.Source
+import scala.io.{BufferedSource, Source}
 import scala.util.Try
 
 
-class Parser[A](fileName: String, parseLine: String => A) {
+class Parser[A](fileName: String) {
 
-  private val file = Try(Source.fromResource("AOC2020/" + fileName))
-  private val lines =  file.map(_.getLines.toList).get
+  private val file: BufferedSource = Try(Source.fromResource("AOC2020/" + fileName)).get
 
-  def parse(): List[A] = {
+  def parse(parseLine: String => A): List[A] = {
+    val lines = file.getLines.toList
     lines.map(parseLine)
   }
 
-  def close() = file.map(_.close())
+  def parseMultiline(parseMultiline: String => A): List[A] = {
+    val entities = file.mkString.split("\\n\\n").toList
+    entities.map(parseMultiline)
+  }
+
+
+  def close() = file.close()
 }

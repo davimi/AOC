@@ -19,8 +19,8 @@ object Day2Puzzle extends App {
       }
     }
 
-    val parser = new Parser[PasswordReq]("day2.txt", parseLine)
-    parser.parse()
+    val parser = new Parser[PasswordReq]("day2.txt")
+    parser.parse(parseLine)
   }
 
   val inputData = getInputData
