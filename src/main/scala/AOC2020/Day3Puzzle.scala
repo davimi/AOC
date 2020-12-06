@@ -54,10 +54,9 @@ object Day3Puzzle extends App {
     numTrees.toLong
   }
 
-  val parser = new Parser[SlopeRow]("day3.txt", parseRow)
+  val parser = new Parser[SlopeRow]("day3.txt")
 
-  val slope = Slope(parser.parseSingleLine())
-  parser.close()
+  val slope = Slope(parser.parse(parseRow))
 
   val part1 = traverseSlope(slope, 1, 3)
 
