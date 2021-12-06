@@ -5,7 +5,7 @@ import scala.util.Try
 
 class Parser[A](fileName: String) {
 
-  private val file: BufferedSource = Try(Source.fromResource("AOC2020/" + fileName)).get
+  private val file: BufferedSource = Try(Source.fromResource("AOC2021/" + fileName)).get
 
   def parse(parseLine: String => A): List[A] = {
     val lines = file.getLines.toList

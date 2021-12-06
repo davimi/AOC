@@ -1,4 +1,4 @@
-name := "AOC2020"
+name := "AOC"
 
 version := "0.1"
 
