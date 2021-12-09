@@ -1,7 +1,5 @@
-# Advent of Code 2020 
+# Advent of Code  
 
-Puzzles are solved with Scala. Advent of Code 2020 [website](https://adventofcode.com/).
+My solutions to Advent of Code [website](https://adventofcode.com/).
 
-## Learnings / Tips
-- Scala's collection operators proved to be very powerful
-- If you are stuck - let it rest and come back to it the day after
+Puzzles are solved with Scala. Solutions may not be perfect, I am doing this after work if I have time. ;) 

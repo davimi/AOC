@@ -37,6 +37,7 @@ object Day6Puzzle extends App {
    * @param population Map (number of days until fish makes a baby) -> number of those fish
    * @return number of total fish at end of simulation
    */
+  @tailrec
   def runSimulationStackEfficient(population: Map[Int, BigInt], numDays: Int = 256): BigInt = {
     if (numDays == 0) population.values.sum
     else {
