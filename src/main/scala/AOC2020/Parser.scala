@@ -20,3 +20,9 @@ class Parser[A](fileName: String) {
 
   def close() = file.close()
 }
+
+object Parser {
+
+  def apply[A](fileName: String) = new Parser[A](fileName)
+
+}

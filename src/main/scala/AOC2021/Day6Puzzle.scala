@@ -1,7 +1,6 @@
 package AOC2021
 
 import scala.annotation.tailrec
-import scala.collection.immutable.ListMap
 
 object Day6Puzzle extends App {
 
